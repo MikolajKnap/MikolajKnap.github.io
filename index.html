@@ -38,14 +38,45 @@
             <div class="right_aboutme">
                 <h1>About Me</h1>
                 <p>Hi there, my name is Mikolaj and I am a computer science student currently
-                     studying Computer Engineering at Politechnika Krakowska.
+                     studying Computer Science in Computer Engineering at Politechnika Krakowska.
                      I am passionate about technology and am particularly interested in computer networks and mobile applications.
                      Outside of my studies, I enjoy playing table tennis as a sport hobby. In the future, 
                      I am planning to obtain CCNA certification to further enhance my skills in computer networking.
                      I am excited to continue exploring the world of technology and all its possibilities.</p>
+
+                <div class="abtme_extra">
+                    <p class="abtme_bars on" onclick="changeinfo('education')">Education</p>
+                    <p class="abtme_bars"onclick="changeinfo('experience')">Experience</p>
+                </div>
+                <div class="abtme_info on" id="education">
+                    <ul>
+                        <li><span>Student Computer Science</span><br>2021 - today<br>Politechnika Krakowska</li>
+                    </ul>
+                </div>
+                <div class="abtme_info" id="experience">
+                    <ul>
+                        <li><span>Looking for experience</span><br>Internships / Jobs</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    var abtme_bars = document.getElementsByClassName("abtme_bars");
+    var abtme_infos = document.getElementsByClassName("abtme_info");
+    function changeinfo(bar){
+        for(abtme_bar of abtme_bars){
+            abtme_bar.classList.remove("on");
+        }
+        for(abtme_info of abtme_infos){
+            abtme_info.classList.remove("on");
+        }
+        event.currentTarget.classList.add("on");
+        document.getElementById(bar).classList.add("on");
+    }
+</script>
+
 </body>
 </html>
