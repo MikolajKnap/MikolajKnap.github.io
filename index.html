@@ -71,13 +71,19 @@
                 <h1>Contact Me</h1>
                 <p> <i class="fa-solid fa-envelope" style="color: #4ca2c7;"></i>mikozxc@gmail.com</p>
                 <div class="social_media">
-                    <a href="https://github.com/MikolajKnap"><i class="fa-brands fa-github"style="color: #4ca2c7;" ></i></a>
-                    <a href="https://www.instagram.com/miki_knap/"><i class="fa-brands fa-instagram" style="color: #4ca2c7;"></i></a>
-                    <a href="https://www.linkedin.com/in/miko%C5%82aj-knap-7042a3270/"><i class="fa-brands fa-linkedin" style="color: #4ca2c7;"></i></a>
+                    <a href="https://github.com/MikolajKnap"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/miki_knap/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/miko%C5%82aj-knap-7042a3270/"><i class="fa-brands fa-linkedin"></i></a>
+                    <button class="firstButton" onclick="openPDF()">View CV</button>
                 </div>
             </div>
             <div class="contact_right">
-
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button class="firstButton submit" type="submit">Submit</button>
+                </form>
             </div>
         </div>
     </div>
@@ -98,6 +104,10 @@
         }
         event.currentTarget.classList.add("on");
         document.getElementById(bar).classList.add("on");
+    }
+
+    function openPDF() {
+        window.open('CV - MK.pdf', '_blank');
     }
 </script>
 
